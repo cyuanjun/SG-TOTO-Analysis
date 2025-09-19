@@ -145,7 +145,7 @@ toto-number-analysis/
 
 ## 📈 3. Data Analysis (Actual Past Data)
 - **3.1 Invividual Frequency Bar Chart** - *toto_analysis.individual_bar_chart()*
-    - We first start by plotting the frequencies of Num1 - Num7 on a bar chart to see if there are any patterns.
+    - We first start by plotting the frequencies of Num1 - Num7 on a bar chart to see if we can identify any patterns.
         - **3.1.1 Num1 Frequency**
         
         ![Num1 Frequency](images/Num1_Freq.png)
@@ -174,7 +174,8 @@ toto-number-analysis/
         
         ![Num7 Frequency](images/Num7_Freq.png)
 
-    - From these bar graphs, we can see that in general, apart from some noise from having a low sample size, Num1 and Num2 are right skewed, Num3 and Num4 are normally distributed, and Num5 and Num6 are left skewed. This makes sense as the numbers are sorted in ascending order, and so earlier numbers tend to be smaller, and later numbers tend to be bigger. This is more of an artifact from sorting the numbers and not a bias in how the numbers are drawn. This, however, gives us an idea of how results are structured, which is still valuable information. 
+    - From these bar graphs, we can see that in general, apart from some noise from having a low sample size, Num1 and Num2 are right skewed, Num3 and Num4 are normally distributed, and Num5 and Num6 are left skewed.
+    - This makes sense as the numbers are sorted in ascending order, and so earlier numbers tend to be smaller, and later numbers tend to be bigger. This is more of an artifact from sorting the numbers and not really a bias in how the numbers are drawn. However, it gives us an idea of how the results are structured, which is still valuable information. 
 
 - **3.2 Grouped Frequency Bar Chart** - *toto_analysis.grouped_bar_chart()*
     - We then plot the frequencies of Num1 - Num6 on a bar chart to see if there are any patterns.
@@ -188,10 +189,10 @@ toto-number-analysis/
         
     ![Overall Frequency](images/Overall_Freq.png)
     
-    - From the bar chart, we can see that the numbers generally appear the same number of times, except for 46-49, which could indicate a bias, or just not having enough cases, and is worth exploring more.
+    - From the bar chart, we can see that the numbers generally appear the same number of times, apart from 46-49, which could potentially indicate a bias, but is more likely just a case of having not enough test cases. We can check this later with our monte carlo simulation.
 
 - **3.4 Confidence Interval** - *toto_analysis.confidence_interval()*
-    - The next thing we can do is to calculate the confidence interval of the various numbers. We will be using 95% confidence interval in this case.
+    - The next thing we can do with the data is to calculate the confidence interval of the various numbers. We will be using 95% confidence interval in this case.
 
         - **3.4.1 Num1 Confidence Interval**
             
@@ -221,14 +222,17 @@ toto-number-analysis/
         
         ![Num7 Confidence Interval](images/Num7_CI.png)
 
-    - addd desc ltr
+    - We will compare these with the monte carlo simulation results later.
 
 ---
 
 ## 📈 4. Data Analysis (Monte Carlo Simulation)
 - **4.1 Simulated Invividual Frequency Bar Chart** - *toto_analysis.individual_bar_chart()*
-    - As we only have access to a small sample size of data (1746 draws), fluctuations could be cause by pure randomness as some numbers may just appear more or less often by chance. To solve this, we will be using Monte Carlo Simulation to generate a large random sample that models the behaviour of TOTO draws. This will allow us to establish a baseline for expected frequencies, which we can then compare against our data. We have chosen to generate a dataset of size 100000 in order to smooth out randomness and reveal clearer frequency trends.
-    -  To do so, we first generate 6 random numbers from 1-49 and sort them in ascending order, then select an additional number from 1-49 that is not any of the other numbers.
+    - As we only have access to a small sample size of data (1746 draws), fluctuations could be caused by pure randomness as some numbers may just appear more or less often by chance.
+    - To solve this, we will be using Monte Carlo Simulation to generate a large random sample that models the behaviour of TOTO draws.
+    - This will allow us to establish a baseline for expected frequencies, which we can then compare against our data. We have chosen to generate a dataset of size 100000 in order to smooth out randomness and reveal clearer frequency trends while not being too big that it takes too long to compute.
+    -  To do so, we first generate 6 non-repeating random numbers from 1-49, then select an additional number from 1-49 that is not any of the other numbers. This replicates what an actual TOTO draw would be like. We then sort the first 6 numbers in ascending order and 
+    - These are the results.
 
         - **4.1.1 Num1 Simulated Frequency**
         
@@ -258,7 +262,7 @@ toto-number-analysis/
         
         ![Num7 Frequency](images/S_Num7_Freq.png)
 
-    - By using a larger sample size, we can see that the graphs smooths out alot more as the there is lesser noise from randomness due to having a small sample size.
+    - By looking at a larger sample size, we can see that the graphs smooths out alot more as there is lesser noise from the randomness of having a small sample size.
     - Comparing with our graph of actual draws, we can see that it follows the same general pattern, which means there is no bias towards or against certain numbers.
     - This shows that there is no significant deviation from what would be expected from random and fair lottery conditions based on Monte Carlo simulation results.
 
@@ -266,7 +270,7 @@ toto-number-analysis/
         
     ![Grouped Frequency](images/S_Grouped_Freq.png)
     
-    - addd desc ltr
+    - Putting the frequency bar charts of the 6 numbers together, we can see that it follows a nice distribution pattern for each number.
 
 - **4.3 Overall Frequency Bar Chart** - *toto_analysis.overerall_frequency_chart()*
         
@@ -390,6 +394,5 @@ toto-number-analysis/
 ## -
 ## -
 ## -
-
 
 
