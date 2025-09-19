@@ -236,80 +236,79 @@ toto-number-analysis/
 
         - **4.1.1 Num1 Simulated Frequency**
         
-        ![Num1 Frequency](images/S_Num1_Freq.png)
+        ![Simulated Num1 Frequency](images/S_Num1_Freq.png)
 
         - **4.1.2 Num2 Simulated Frequency**
 
-        ![Num2 Frequency](images/S_Num2_Freq.png)
+        ![Simulated Num2 Frequency](images/S_Num2_Freq.png)
 
         - **4.1.3 Num3 Simulated requency**
 
-        ![Num3 Frequency](images/S_Num3_Freq.png)
+        ![Simulated Num3 Frequency](images/S_Num3_Freq.png)
 
         - **4.1.4 Num4 Simulated Frequency**
 
-        ![Num4 Frequency](images/S_Num4_Freq.png)
+        ![Simulated Num4 Frequency](images/S_Num4_Freq.png)
 
         - **4.1.5 Num5 Simulated Frequency**
 
-        ![Num5 Frequency](images/S_Num5_Freq.png)
+        ![Simulated Num5 Frequency](images/S_Num5_Freq.png)
 
         - **4.1.6 Num6 Simulated Frequency**
 
-        ![Num6 Frequency](images/S_Num6_Freq.png)
+        ![Simulated Num6 Frequency](images/S_Num6_Freq.png)
 
         - **4.1.7 Num7 Simulated Frequency**
         
-        ![Num7 Frequency](images/S_Num7_Freq.png)
+        ![Simulated Num7 Frequency](images/S_Num7_Freq.png)
 
     - By looking at a larger sample size, we can see that the graphs smooths out alot more as there is lesser noise from the randomness of having a small sample size.
     - Comparing with our graph of actual draws, we can see that it follows the same general pattern, which means there is no bias towards or against certain numbers.
     - This shows that there is no significant deviation from what would be expected from random and fair lottery conditions based on Monte Carlo simulation results.
 
-- **4.2 Grouped Frequency Bar Chart** - *toto_analysis.grouped_bar_chart()*
+- **4.2 Simulated Grouped Frequency Bar Chart** - *toto_analysis.grouped_bar_chart()*
         
-    ![Grouped Frequency](images/S_Grouped_Freq.png)
+    ![Simulated Grouped Frequency](images/S_Grouped_Freq.png)
     
     - Putting the frequency bar charts of the 6 numbers together, we can see that it follows a nice distribution pattern for each number.
 
-- **4.3 Overall Frequency Bar Chart** - *toto_analysis.overerall_frequency_chart()*
+- **4.3 Simulated Overall Frequency Bar Chart** - *toto_analysis.overerall_frequency_chart()*
         
-    ![Overall Frequency](images/S_Overall_Freq.png)
+    ![Simulated Overall Frequency](images/S_Overall_Freq.png)
     
     - From the bar chart, we can see that the numbers generally appear the same number of times unlike the chart from actual data, that has lesser counts of 46-49. This shows that it is most likely a result of having too small of a sample size.
 
-- **4.4 Confidence Interval**   - *toto_analysis.confidence_interval()*
-    - The next thing we can do is to calculate the confidence interval of the various numbers. We will be using 95% confidence interval in this case.
+- **4.4 Simulated Confidence Interval**   - *toto_analysis.confidence_interval()*
 
-        - **4.4.1 Num1 Confidence Interval**
+        - **4.4.1 Simulated Num1 Confidence Interval**
             
-        ![Num1 Confidence Interval](images/S_Num1_CI.png)
+        ![Simulated Num1 Confidence Interval](images/S_Num1_CI.png)
 
-        - **4.4.2 Num2 Confidence Interval**
+        - **4.4.2 Simulated Num2 Confidence Interval**
 
-        ![Num2 Confidence Interval](images/S_Num2_CI.png)
+        ![Simulated Num2 Confidence Interval](images/S_Num2_CI.png)
 
-        - **4.4.3 Num3 Confidence Interval**
+        - **4.4.3 Simulated Num3 Confidence Interval**
 
-        ![Num3 Confidence Interval](images/S_Num3_CI.png)
+        ![Simulated Num3 Confidence Interval](images/S_Num3_CI.png)
 
-        - **4.4.4 Num4 Confidence Interval**
+        - **4.4.4 Simulated Num4 Confidence Interval**
 
-        ![Num4 Confidence Interval](images/S_Num4_CI.png)
+        ![Simulated Num4 Confidence Interval](images/S_Num4_CI.png)
 
-        - **4.4.5 Num5 Confidence Interval**
+        - **4.4.5 Simulated Num5 Confidence Interval**
 
-        ![Num5 Confidence Interval](images/S_Num5_CI.png)
+        ![Simulated Num5 Confidence Interval](images/S_Num5_CI.png)
 
-        - **4.4.6 Num6 Confidence Interval**
+        - **4.4.6 Simulated Num6 Confidence Interval**
 
-        ![Num6 Confidence Interval](images/S_Num6_CI.png)
+        ![Simulated Num6 Confidence Interval](images/S_Num6_CI.png)
 
-        - **4.4.7 Num7 Confidence Interval**
+        - **4.4.7 Simulated Num7 Confidence Interval**
         
-        ![Num7 Confidence Interval](images/S_Num7_CI.png)
+        ![Simulated Num7 Confidence Interval](images/S_Num7_CI.png)
 
-    - addd desc ltr
+    - Taking the
 
 ---
 
